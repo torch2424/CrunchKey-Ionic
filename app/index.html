@@ -8,6 +8,7 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+    <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link href="styles/style.css" rel="stylesheet">
@@ -19,6 +20,7 @@
     <!-- ionic/angularjs js -->
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -26,7 +28,7 @@
     <script src="bower_components/ionic/release/js/ionic.js"></script>
     <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
     <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
-    <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
+    <script src="bower_components/materialize/bin/materialize.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -38,14 +40,27 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/configuration.js"></script>
     <!-- endbuild -->
+    <title>CrunchKey</title>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" class = "animated fadeIn">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
       <ion-content>
+          <div class ="card-panel grey lighten-3 z-depth-3 center">
+              <h1 class="animated pulse center">CrunchKey</h1>
+              <h5 class="animated pulse center">The Instant Number Cruncher</h5>
+              <br>
+              <h3 class="center">Enter Math Here:</h3>
+              <br>
+               <input placeholder="E.g. 2*4r3" id="inputBox" type="text" class="validate">
+               <label for="first_name">Crunchkey</label>
+               <br>
+               <h3 class="center">Your Answer is:</h3>
+
+
+          </div>
+          <br>
+          <br>
       </ion-content>
     </ion-pane>
   </body>
