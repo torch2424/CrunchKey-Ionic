@@ -39,13 +39,14 @@
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/configuration.js"></script>
+    <script src="scripts/controllers.js"></script>
     <!-- endbuild -->
     <title>CrunchKey</title>
   </head>
-  <body ng-app="starter" class = "animated fadeIn">
+  <body ng-app="starter">
 
     <ion-pane>
-      <ion-content>
+      <ion-content ng-controller="imageListCtl" class = "animated fadeIn">
           <div class ="card-panel grey lighten-3 z-depth-3 center">
               <h1 class="animated pulse center">CrunchKey</h1>
               <h5 class="animated pulse center">The Instant Number Cruncher</h5>
