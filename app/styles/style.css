@@ -20,6 +20,18 @@ body
     background-color: #e8e9ea;
 }
 
+/*to hide our views on clear*/
+
+.clearable {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.clearable.ng-hide {
+    display: block!important;
+  opacity:0;
+}
+
 
 
 
