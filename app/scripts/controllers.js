@@ -55,7 +55,7 @@ crunchControllers.controller('mathCtl', function($scope, $timeout) {
     	priority = [];
     	operatorOrder = [];
     	numbers = [];
-    	answer = 0;
+    	$scope.answer = 0;
 
     }
 
@@ -257,15 +257,11 @@ crunchControllers.controller('mathCtl', function($scope, $timeout) {
 
         //Timeout
         $timeout(function() {
-
+            //Input Box and answer
+            document.getElementById('inputBox').value = "";
+            document.getElementById('answer').innerHTML = "";
+            $scope.clearing = false;
         }, 1000);
-
-		//Input Box and answer
-		document.getElementById('inputBox').value = "";
-		document.getElementById('answer').innerHTML = "";
-
-        //Fade in our variables
-        $scope.clearing = false;
 
     	//to prevent going back to the top of the page
     	event.preventDefault();

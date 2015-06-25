@@ -53,15 +53,15 @@
               <br>
               <h3 class="center">Enter Math Here:</h3>
               <br>
-               <input placeholder="E.g. 2*4r3" id="inputBox" ng-keyup="compute()"
-               ng-class="{fadeIn: clearing == false, fadeOut: clearing}" type="text" class="validate animated">
+               <input placeholder="E.g. 2*4r3" id="inputBox" ng-keyup="compute()" ng-show="!clearing" class="validate" type="text">
                <label for="first_name">Crunchkey</label>
                <br>
                <br>
                <a class="waves-effect waves-light grey darken-1 btn-large button" ng-click="clear()">Clear</a>
                <br>
                <h3 class="center">Your Answer is:</h3>
-               <h5 id = "answer"></h5>
+               <h5 id = "answer" ng-show="!clearing"></h5>
+               {{clearing}}
 
 
           </div>
