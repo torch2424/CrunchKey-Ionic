@@ -2,7 +2,7 @@
 
 var crunchControllers = angular.module('starter.controllers', []);
 
-crunchControllers.controller('mathCtl', function($scope) {
+crunchControllers.controller('mathCtl', function($scope, $timeout) {
     //Simply ported from cunchkey web, and added a scope variable
     //Our arraylists for our numbers and operators
     var operators = [];
@@ -10,6 +10,9 @@ crunchControllers.controller('mathCtl', function($scope) {
     var operatorOrder = [];
     var numbers = [];
     $scope.answer;
+
+    //Our variable for if we are fading out
+    $scope.clearing = false;
 
     //Adding "r" to mean root!
     //Regexes for fetching our input
@@ -23,7 +26,7 @@ crunchControllers.controller('mathCtl', function($scope) {
 
     //Function to compute answer and display it in text
     $scope.compute = function()
-    {  
+    {
     	operators = [];
     	numbers = [];
     	//Get the input from the text box, working
@@ -43,7 +46,7 @@ crunchControllers.controller('mathCtl', function($scope) {
     	}
     	else
     	{
-    		document.getElementById('answer').innerHTML = answer;
+    		document.getElementById('answer').innerHTML = $scope.answer;
     	}
 
     	//Now reset our variables
@@ -111,13 +114,13 @@ crunchControllers.controller('mathCtl', function($scope) {
     	}
 
     	//Putting all digits, persiods and opertators into an array
-    	tempEquation = math.match(numbersRegex);
+    	var tempEquation = math.match(numbersRegex);
     	//Now we are getting all the floats from the array, by adding all digits and periods to
     	//a string, and then parsing that string for floats
     	if(tempEquation != null)
     	{
     		var tempFloat = "";
-    		for(i = 0; i < tempEquation.length; i++)
+    		for(var i = 0; i < tempEquation.length; i++)
     		{
     			if(operatorsRegex.test(tempEquation[i]) == false)
     			{
@@ -155,7 +158,7 @@ crunchControllers.controller('mathCtl', function($scope) {
     					console.log("Numbersarray: " + numbers);
     					//Find the highest priority operator
     					var index = 0;
-    					for(i = 0; i < operatorOrder.length; i++)
+    					for(var i = 0; i < operatorOrder.length; i++)
     					{
     						if(operatorOrder[i] > operatorOrder[index])
     						{
@@ -243,27 +246,26 @@ crunchControllers.controller('mathCtl', function($scope) {
     	}
 
     //function to clear the screen through the clear button
-    function clear()
+    $scope.clear = function()
     {
     	//Get our variables
     	var inputValue = document.getElementById("inputBox");
     	var answer = document.getElementById('answer');
 
+        //Fade out our variables
+        $scope.clearing = true;
 
+        //Timeout
+        $timeout(function() {
 
-    	//Fade our our variables
-    	$(inputValue).add(answer).animate
-    	({opacity: 0.0}, 500,
-    	function()
-    	{
-    		//Input Box and answer
-    		document.getElementById('inputBox').value = "";
-    		document.getElementById('answer').innerHTML = "";
-    	});
+        }, 1000);
 
-    	//Fade back in
-    	$(inputValue).add(answer).animate
-    	({opacity: 1.0}, 500);
+		//Input Box and answer
+		document.getElementById('inputBox').value = "";
+		document.getElementById('answer').innerHTML = "";
+
+        //Fade in our variables
+        $scope.clearing = false;
 
     	//to prevent going back to the top of the page
     	event.preventDefault();
