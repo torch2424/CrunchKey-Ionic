@@ -10,6 +10,11 @@
     width:90%;
 }
 
+.button{
+    margin: 2%;
+    text-align: center;
+}
+
 body
 {
     background-color: #e8e9ea;
