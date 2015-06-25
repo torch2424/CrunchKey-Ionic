@@ -20,6 +20,11 @@ body
     background-color: #e8e9ea;
 }
 
+.semiFooter
+{
+    font-size: .75em;
+}
+
 /*to hide our views on clear*/
 
 .clearable {

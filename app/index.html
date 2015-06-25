@@ -54,16 +54,21 @@
               <h3 class="center">Enter Math Here:</h3>
               <br>
                <input placeholder="E.g. 2*4r3" id="inputBox" ng-keyup="compute()" ng-hide="clearing" class="validate clearable" type="text">
-               <label for="first_name" class="clearable">Crunchkey</label>
+               <label for="first_name" class="clearable" ng-hide="clearing">Crunchkey</label>
                <br>
                <br>
                <a class="waves-effect waves-light grey darken-1 btn-large button" ng-click="clear()">Clear</a>
                <br>
                <h3 class="center">Your Answer is:</h3>
                <h5 id = "answer" class="clearable" ng-hide="clearing"></h5>
-               {{clearing}}
-
-
+               <br>
+               <h3 class="center">Key:</h3>
+               <!--Added no wrap so that each element does not get cut off -->
+                <div class="keyelement">^ Exponent,</div> <div class="keyelement">r Nth Root,</div> <div class="keyelement">* Multiplication,</div>
+                <div class="keyelement">/ Division,</div> <div class="keyelement">% Remainder(Modulo),</div> <div class="keyelement">+ Additon,</div>
+                <div class="keyelement">- Subtraction</div>
+                <br>
+               <div class = "semiFooter">(Calculated from left to right, No order of operations, but parentheses are valid)</div>
           </div>
           <br>
           <br>
