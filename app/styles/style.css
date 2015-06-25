@@ -37,7 +37,19 @@ body
   opacity:0;
 }
 
+/*git hub button*/
+.github-button
+{
+    padding-left: 5px;
+}
 
+/* Main links to my dev stuff on home*/
+.devLinks
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 /* animate.css*/
