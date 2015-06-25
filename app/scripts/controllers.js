@@ -1,7 +1,7 @@
 'use strict';
 
-var phocalsControllers = angular.module('starter.controllers', []);
+var crunchControllers = angular.module('starter.controllers', []);
 
-phocalsControllers.controller('imageListCtl', function($scope) {
-    alert("hi");
+crunchControllers.controller('mathCtl', function($scope) {
+    alert('hi');
   });
