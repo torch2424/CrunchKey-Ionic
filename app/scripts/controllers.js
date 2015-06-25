@@ -149,13 +149,9 @@ crunchControllers.controller('mathCtl', function($scope, $timeout) {
     			//perform math
     			//make order of operations array
     			//loop for order of operations
-    			console.log("START!!!!!!!!");
     				//loop for doing math if those operators exist
     				while(operators.length > 0 && numbers.length >= operators.length)
     				{
-    					console.log("Operator order array: " + operatorOrder);
-    					console.log("Operator array: " + operators);
-    					console.log("Numbersarray: " + numbers);
     					//Find the highest priority operator
     					var index = 0;
     					for(var i = 0; i < operatorOrder.length; i++)
@@ -166,14 +162,10 @@ crunchControllers.controller('mathCtl', function($scope, $timeout) {
     						}
     					}
 
-    					console.log("Index: " + index);
-    					console.log("numbers[index + 1]: " + numbers[index + 1]);
-
     					//If we are currently doing the operator in order of operations,
     					//and they are more numbers than operators or an equal amount (as it should be)
     					if(numbers[index + 1] != null)
     					{
-    						console.log("entered the matrix");
     						var tempAnswer;
     						//Exponent
     						if(operators[index] == "^")
@@ -190,7 +182,6 @@ crunchControllers.controller('mathCtl', function($scope, $timeout) {
     						else if(operators[index] == "*" || operators[index] == "x"
     						|| operators[index] == "X")
     						{
-    							console.log(numbers[index] + "," + numbers[index + 1]);
     							tempAnswer = numbers[index] * numbers[index + 1];
     						}
     						//Division
@@ -207,7 +198,6 @@ crunchControllers.controller('mathCtl', function($scope, $timeout) {
     						else if(operators[index] == "+")
     						{
     							tempAnswer = numbers[index] + numbers[index + 1];
-    							console.log(numbers[index] + "," + numbers[index + 1]);
     						}
     						//Subtraction
     						else if(operators[index] == "-")
@@ -215,7 +205,6 @@ crunchControllers.controller('mathCtl', function($scope, $timeout) {
     							tempAnswer = numbers[index] - numbers[index + 1];
     						}
 
-    						console.log("here is temp answer now: " + tempAnswer);
     						//Lastly replace the old numbers and remove the operators
     						//Using splice method
     						numbers.splice(index, 2, tempAnswer);
@@ -239,7 +228,6 @@ crunchControllers.controller('mathCtl', function($scope, $timeout) {
     		//The last remaining number is the answer
     		if(numbers != null && numbers.length > 0)
     		{
-    			console.log("final answer: " + numbers[0]);
     			$scope.answer = numbers[0];
     		}
 
