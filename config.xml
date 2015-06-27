@@ -10,4 +10,15 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+
+
+ <platform name="ios">
+     <icon src="images/CrunchKey.png" width="128" height="128"/>
+ </platform>
+
+ <platform name="android">
+     <icon src="images/CrunchKey.png" width="128" height="128"/>
+ </platform>
+
+
 </widget>
