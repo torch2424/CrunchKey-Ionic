@@ -1,27 +1,36 @@
 /* Empty. Add your own CSS if you like */
 
+/*Caviar Dreams, Doesn't look good, only styles button */
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fonts/CaviarDreams.eot');
+    src: url('../fonts/CaviarDreams.eot') format('embedded-opentype'),
+         url('../fonts/CaviarDreams.woff2') format('woff2'),
+         url('../fonts/CaviarDreams.woff') format('woff'),
+         url('../fonts/CaviarDreams.ttf') format('truetype'),
+         url('../fonts/CaviarDreams.svg#CaviarDreams') format('svg');
+}
+
 .center{
     margin-left: auto;
     margin-right: auto;
 }
 
-.card-panel
-{
+.card-panel {
     width:90%;
 }
 
-.button{
+.button {
     margin: 2%;
     text-align: center;
 }
 
-body
-{
+body {
     background-color: #e8e9ea;
 }
 
-.semiFooter
-{
+.semiFooter {
     font-size: .75em;
 }
 
@@ -38,8 +47,7 @@ body
 }
 
 /*git hub button*/
-.github-button
-{
+.github-button {
     padding-left: 5px;
 }
 
