@@ -11,7 +11,7 @@ Since I do professional development, and personal web development projects,
 I dont have as much time as I used to for my android apps,
 So any help finding and squashing bugs is appreciated :)
 
-**Starting the App: **
+##Starting the App:
 Clone the repo, run both '`npm install` and `bower install`.Run `grunt build` for building and `grunt serve` for preview.
 
 
