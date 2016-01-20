@@ -1,7 +1,7 @@
 # CrunchKey-Ionic
 An app to calculate strings as expressions real time
 
-![CrunchKey Img](http://aaronthedev.com/images/crunchkeymobilescreen.1c6b6952.png)
+![CrunchKey Img](https://aaronthedev.com/images/crunchkeymobilescreen.bb660543.png)
 
 >  This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 
@@ -15,10 +15,6 @@ So any help finding and squashing bugs is appreciated :)
 Clone the repo, run both '`npm install` and `bower install`.Run `grunt build` for building and `grunt serve` for preview.
 
 
-##License
+## License
 
-All Assets and rights of the application are reserved to Aaron Turner (Me)
-
-However this code is open-source and may be used to help in your own projects
-
-P.S I don't know much about each licenses haha
+Licensed under the [Apache License 2.0](http://choosealicense.com/licenses/apache-2.0/)
